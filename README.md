@@ -1,2 +1,2 @@
 ## Why?
-Because some websites just want to make life harder than it ought to
+Because some websites just want to make life harder than it ought to be
