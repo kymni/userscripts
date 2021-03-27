@@ -1,0 +1,12 @@
+// ==UserScript==
+// @name     Remove Stanbic iBanking password onpaste attribute
+// @version  1
+// @author	 @kymni
+// @match		 https://www.ibanking.stanbicbank.co.ke/*
+// @grant    none
+// ==/UserScript==
+(() => {
+  window.addEventListener('load', () => {
+    document.getElementById('AuthenticationFG.ACCESS_CODE').removeAttribute('onpaste')
+  })
+})();

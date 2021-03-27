@@ -1,0 +1,18 @@
+// ==UserScript==
+// @name     Nation.Africa ByPass Adblocker
+// @version  1
+// @author	 @kymni
+// @match		 https://nation.africa/*
+// @grant    none
+// ==/UserScript==
+(() => {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementsByClassName('error-message-block')[0].remove()
+      document.getElementsByClassName('article-page')[0].style.display = 'block'
+      document.querySelectorAll('.promotion-banner').forEach(e => e.remove());
+      document.querySelectorAll('.datawall-content').forEach(e => e.classList.remove('datawall-content'))
+      document.querySelectorAll('.paragraph-wrapper').forEach((e) => {e.style.display = 'block';})
+    }, 10)
+  })
+})();
