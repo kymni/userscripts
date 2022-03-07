@@ -9,10 +9,13 @@
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.getElementsByClassName('error-message-block')[0].remove()
+      document.getElementsByClassName('modal')[0].remove()
+      document.getElementsByClassName('modal-backdrop')[0].remove()
       document.getElementsByClassName('article-page')[0].style.display = 'block'
       document.querySelectorAll('.promotion-banner').forEach(e => e.remove());
       document.querySelectorAll('.datawall-content').forEach(e => e.classList.remove('datawall-content'))
+      document.querySelectorAll('body').forEach(e => e.classList.remove('modal-open'))
       document.querySelectorAll('.paragraph-wrapper').forEach((e) => {e.style.display = 'block';})
-    }, 10)
+    }, 2000)
   })
 })();
