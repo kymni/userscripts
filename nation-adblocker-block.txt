@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Nation.Africa ByPass Adblocker
-// @version  1
+// @version  1.1
 // @author	 @kymni
 // @match		 https://nation.africa/*
 // @grant    none
@@ -8,14 +8,19 @@
 (() => {
   window.addEventListener('load', () => {
     setTimeout(() => {
-      document.getElementsByClassName('error-message-block')[0].remove()
-      document.getElementsByClassName('modal')[0].remove()
-      document.getElementsByClassName('modal-backdrop')[0].remove()
-      document.getElementsByClassName('article-page')[0].style.display = 'block'
-      document.querySelectorAll('.promotion-banner').forEach(e => e.remove());
-      document.querySelectorAll('.datawall-content').forEach(e => e.classList.remove('datawall-content'))
-      document.querySelectorAll('body').forEach(e => e.classList.remove('modal-open'))
-      document.querySelectorAll('.paragraph-wrapper').forEach((e) => {e.style.display = 'block';})
+      // document.getElementsByClassName('error-message-block')[0].remove()
+      // document.getElementsByClassName('modal')[0].remove()
+      // document.getElementsByClassName('modal-backdrop')[0].remove()
+      // document.getElementsByClassName('article-page')[0].style.display = 'block'
+      // document.querySelectorAll('.promotion-banner').forEach(e => e.remove());
+      // document.querySelectorAll('.datawall-content').forEach(e => e.classList.remove('datawall-content'))
+      // document.querySelectorAll('body').forEach(e => e.classList.remove('modal-open'))
+      // document.querySelectorAll('.paragraph-wrapper').forEach((e) => {e.style.display = 'block';})
+      document.querySelectorAll('.nmgp').forEach((e) => {
+        e.style.display = 'block';
+        e.style.position = 'inherit';
+        e.style.color =  'inherit';
+      })
     }, 2000)
   })
 })();
