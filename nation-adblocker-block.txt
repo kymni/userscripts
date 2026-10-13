@@ -16,11 +16,27 @@
       // document.querySelectorAll('.datawall-content').forEach(e => e.classList.remove('datawall-content'))
       // document.querySelectorAll('body').forEach(e => e.classList.remove('modal-open'))
       // document.querySelectorAll('.paragraph-wrapper').forEach((e) => {e.style.display = 'block';})
-      document.querySelectorAll('.nmgp').forEach((e) => {
-        e.style.display = 'block';
-        e.style.position = 'inherit';
-        e.style.color =  'inherit';
+      document.getElementById('#subscription-renewal-widget')?.remove()
+      document.getElementById('#article-paywall-wrapper')?.remove()
+      document.querySelectorAll('aside').forEach((aside) => {
+        console.log('aside found')
+        // 2. Create the brand-new replacement <div>
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('paragraph-wrapper')
+
+        // 3. Move all child nodes from the <p> into the new <div>
+        while (aside.firstChild) {
+          newDiv.appendChild(aside.firstChild);
+        }
+
+        // 4. Replace the old <p> with the newly populated <div>
+        aside.replaceWith(newDiv);
       })
+      // document.querySelectorAll('.nmgp').forEach((e) => {
+      //   e.style.display = 'block';
+      //   e.style.position = 'inherit';
+      //   e.style.color =  'inherit';
+      // })
     }, 2000)
   })
 })();
